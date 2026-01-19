@@ -1,154 +1,150 @@
-[index.html](https://github.com/user-attachments/files/24683444/index.html)
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>TuFuturoYA</title>
+  <meta charset="UTF-8">
+  <title>TuFuturoYa | Estudia y Trabaja Mejor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ESTILOS (CSS) -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
 
-        header {
-            background: #1e90ff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
 
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
 
-        section {
-            padding: 20px;
-            background: white;
-            margin: 15px;
-            border-radius: 8px;
-        }
+    .boton {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 30px;
+      background: #00c6ff;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .hero {
-            text-align: center;
-        }
+    .boton:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
 
-        .boton {
-            display: inline-block;
-            background: #1e90ff;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        .oculto {
-            display: none;
-        }
-    </style>
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #00c6ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0,0,0,0.3);
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-    <h1>TuFuturoYA</h1>
-    <p>Descubre qué estudiar y cómo conseguir tu primer trabajo</p>
-</header>
+  <header>
+    <h1>TuFuturoYa</h1>
+    <p>Descubre qué estudiar, cómo conseguir trabajo y mejorar tu futuro</p>
 
-<nav>
-    <a onclick="mostrar('inicio')">Inicio</a>
-    <a onclick="mostrar('test')">Test Vocacional</a>
-    <a onclick="mostrar('empleo')">Primer Empleo</a>
-    <a onclick="mostrar('carreras')">Carreras con Futuro</a>
-</nav>
+    <a href="#estudiar" class="boton">📚 Qué estudiar</a>
+    <a href="#trabajo" class="boton">💼 Conseguir trabajo</a>
+    <a href="#test" class="boton">🧠 Test vocacional</a>
+  </header>
 
-<!-- INICIO -->
-<section id="inicio">
-    <div class="hero">
-        <h2>¿No sabes qué estudiar?</h2>
-        <p>Haz nuestro test vocacional y descubre tu camino en minutos.</p>
-        <a class="boton" onclick="mostrar('test')">Hacer el test</a>
+  <section id="estudiar">
+    <h2>📚 ¿Qué puedes estudiar?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Universidad</h3>
+        <p>Carreras profesionales con alta demanda laboral.</p>
+      </div>
+      <div class="card">
+        <h3>Técnicos y Tecnólogos</h3>
+        <p>Opciones rápidas para trabajar y ganar experiencia.</p>
+      </div>
+      <div class="card">
+        <h3>Cursos Online</h3>
+        <p>Aprende programación, diseño, marketing y más.</p>
+      </div>
     </div>
+  </section>
 
-    <h3>¿Qué encontrarás aquí?</h3>
-    <ul>
-        <li>✔ Test vocacional rápido</li>
-        <li>✔ Carreras con futuro en Colombia</li>
-        <li>✔ Cómo conseguir trabajo sin experiencia</li>
-    </ul>
-</section>
+  <section id="trabajo">
+    <h2>💼 Cómo conseguir trabajo</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Hoja de vida</h3>
+        <p>Aprende a crear un CV atractivo y profesional.</p>
+      </div>
+      <div class="card">
+        <h3>Entrevistas</h3>
+        <p>Consejos para responder con seguridad.</p>
+      </div>
+      <div class="card">
+        <h3>Primer empleo</h3>
+        <p>Opciones para jóvenes sin experiencia.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- TEST VOCACIONAL -->
-<section id="test" class="oculto">
-    <h2>Test Vocacional</h2>
+  <section id="test">
+    <h2>🧠 Test vocacional (Próximamente)</h2>
+    <p>Muy pronto podrás descubrir qué carrera va mejor contigo.</p>
+  </section>
 
-    <p><strong>1. ¿Qué te gusta más?</strong></p>
-    <p>A) Ayudar a personas</p>
-    <p>B) Resolver problemas</p>
-    <p>C) Crear cosas</p>
-
-    <p><strong>2. ¿Cómo te ves en el futuro?</strong></p>
-    <p>A) Trabajando con personas</p>
-    <p>B) Frente a un computador</p>
-    <p>C) Dirigiendo proyectos</p>
-
-    <p><em>Próximamentes resultados automáticos</em></p>
-</section>
-
-<!-- PRIMER EMPLEO -->
-<section id="empleo" class="oculto">
-    <h2>Cómo conseguir tu primer trabajo</h2>
-    <ul>
-        <li>Haz una hoja de vida sencilla</li>
-        <li>No mientas sobre experiencia</li>
-        <li>Aplica a trabajos básicos primero</li>
-        <li>Prepárate para entrevistas</li>
-    </ul>
-</section>
-
-<!-- CARRERAS -->
-<section id="carreras" class="oculto">
-    <h2>Carreras con futuro</h2>
-    <ul>
-        <li>Ingeniería de Software</li>
-        <li>Salud</li>
-        <li>Tecnologías del SENA</li>
-        <li>Marketing digital</li>
-    </ul>
-</section>
-
-<footer>
-    <p>© 2026 TuFuturoYA</p>
-</footer>
-
-<!-- JAVASCRIPT -->
-<script>
-    function mostrar(seccion) {
-        let secciones = document.querySelectorAll("section");
-        secciones.forEach(s => s.classList.add("oculto"));
-
-        document.getElementById(seccion).classList.remove("oculto");
-    }
-</script>
+  <footer>
+    © 2026 TuFuturoYa | Creado por Santiago 🚀
+  </footer>
 
 </body>
 </html>
+
